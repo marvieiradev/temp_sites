@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Barbearia Original App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Página Inicial (Home) -->
+    <div id="homePage" class="app-page active">
+      <!-- Logo e Descrição -->
+      <div class="container">
+        <div class="logo-container">
+          <!-- Logo da Barbearia -->
+          <img src="img/logo.webp" alt="" width="150px" />
+          <h1 class="app-title">BARBEARIA ORIGINAL</h1>
+          <p class="app-description">Estilo e tradição em cada corte.</p>
+        </div>
+
+        <!-- Grade de Botões do App -->
+        <div class="buttons-grid">
+          <!-- Botão Agendar -->
+          <button
+            class="app-btn ripple"
+            data-action="openModal"
+            data-target="agendarModal"
+          >
+            <div class="icon-circle">
+              <i class="fas fa-calendar-alt"></i>
+            </div>
+            <span>AGENDAR</span>
+          </button>
+
+          <!-- Botão Localização -->
+          <button
+            class="app-btn ripple"
+            data-action="openPage"
+            data-target="localizacaoPage"
+          >
+            <div class="icon-circle">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <span>LOCALIZAÇÃO</span>
+          </button>
+
+          <!-- Botão Serviços -->
+          <button
+            class="app-btn ripple"
+            data-action="openPage"
+            data-target="servicosPage"
+          >
+            <div class="icon-circle">
+              <i class="fas fa-cut"></i>
+            </div>
+            <span>SERVIÇOS</span>
+          </button>
+
+          <!-- Botão Profissionais -->
+          <button
+            class="app-btn ripple"
+            data-action="openPage"
+            data-target="profissionaisPage"
+          >
+            <div class="icon-circle">
+              <i class="fas fa-users"></i>
+            </div>
+            <span>PROFISSIONAIS</span>
+          </button>
+
+          <!-- Botão Galeria -->
+          <button
+            class="app-btn ripple"
+            data-action="openPage"
+            data-target="galeriaPage"
+          >
+            <div class="icon-circle">
+              <i class="fas fa-images"></i>
+            </div>
+            <span>GALERIA</span>
+          </button>
+
+          <!-- Botão Sobre -->
+          <button
+            class="app-btn ripple"
+            data-action="openPage"
+            data-target="sobrePage"
+          >
+            <div class="icon-circle">
+              <i class="fas fa-info-circle"></i>
+            </div>
+            <span>SOBRE</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Barra inferior (estilo app) -->
+      <div class="bottom-bar"></div>
+    </div>
+
+    <!-- Página de Localização -->
+    <div id="localizacaoPage" class="app-page">
+      <!-- Cabeçalho da Página -->
+      <div class="page-header">
+        <button class="back-btn" data-action="goHome">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <h2>LOCALIZAÇÃO</h2>
+        <div class="spacer"></div>
+      </div>
+
+      <!-- Conteúdo da Página -->
+      <div class="page-content">
+        <!-- Mapa (representado por um div) -->
+        <div class="map-container">
+          <img src="img/map.webp" alt="" width="100%" />
+        </div>
+
+        <!-- Informações de Endereço -->
+        <div class="space-y-6">
+          <div class="location-section">
+            <h3 class="location-title">ENDEREÇO</h3>
+            <div class="location-item">
+              <div class="location-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="location-content">
+                <p class="location-name">Barbearia Original</p>
+                <p class="location-text">Av. Paulista, 1000 - Bela Vista</p>
+                <p class="location-text">São Paulo - SP, 01310-100</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="location-section">
+            <h3 class="location-title">HORÁRIO DE FUNCIONAMENTO</h3>
+            <div class="location-item">
+              <div class="location-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="location-content">
+                <p class="location-text">Segunda a Sexta: 9h às 20h</p>
+                <p class="location-text">Sábado: 9h às 18h</p>
+                <p class="location-text">Domingo: Fechado</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="location-section">
+            <h3 class="location-title">CONTATO</h3>
+            <div class="location-item">
+              <div class="location-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="location-content">
+                <p class="location-text">(11) 99999-9999</p>
+                <p class="location-text">(11) 3333-3333</p>
+              </div>
+            </div>
+            <div class="location-item">
+              <div class="location-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="location-content">
+                <p class="location-text">contato@barbearia-original.com.br</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botões de Ação -->
+      <div class="page-footer">
+        <div class="location-actions">
+          <button class="btn btn-primary ripple location-btn">
+            <i class="fa-solid fa-comments"></i> MENSAGEM
+          </button>
+          <button class="btn btn-secondary ripple location-btn">
+            <i class="fas fa-directions"></i> COMO CHEGAR
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Página de Serviços -->
+    <div id="servicosPage" class="app-page">
+      <!-- Cabeçalho da Página -->
+      <div class="page-header">
+        <button class="back-btn" data-action="goHome">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <h2>SERVIÇOS</h2>
+        <div class="spacer"></div>
+      </div>
+
+      <!-- Conteúdo da Página -->
+      <div class="page-content">
+        <div class="space-y-6">
+          <!-- Serviço 1 -->
+          <div class="service-card">
+            <div class="service-card-content">
+              <div class="service-icon">
+                <i class="fas fa-cut"></i>
+              </div>
+              <div class="service-info">
+                <h3 class="service-title">Corte de Cabelo</h3>
+                <p class="service-description">
+                  Cortes modernos ou clássicos com técnicas precisas
+                </p>
+              </div>
+              <div class="service-price">
+                <span>R$ 45</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Serviço 2 -->
+          <div class="service-card">
+            <div class="service-card-content">
+              <div class="service-icon">
+                <i class="fa-solid fa-memory"></i>
+              </div>
+              <div class="service-info">
+                <h3 class="service-title">Barba Completa</h3>
+                <p class="service-description">
+                  Modelagem e hidratação com produtos especiais
+                </p>
+              </div>
+              <div class="service-price">
+                <span>R$ 35</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Serviço 3 -->
+          <div class="service-card">
+            <div class="service-card-content">
+              <div class="service-icon">
+                <i class="fas fa-spa"></i>
+              </div>
+              <div class="service-info">
+                <h3 class="service-title">Combo Completo</h3>
+                <p class="service-description">
+                  Corte + barba com bebida cortesia
+                </p>
+              </div>
+              <div class="service-price">
+                <span>R$ 75</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Serviço 4 -->
+          <div class="service-card">
+            <div class="service-card-content">
+              <div class="service-icon">
+                <i class="fas fa-tint"></i>
+              </div>
+              <div class="service-info">
+                <h3 class="service-title">Coloração</h3>
+                <p class="service-description">
+                  Coloração profissional para cabelo ou barba
+                </p>
+              </div>
+              <div class="service-price">
+                <span>R$ 60</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Serviço 5 -->
+          <div class="service-card">
+            <div class="service-card-content">
+              <div class="service-icon">
+                <i class="fas fa-child"></i>
+              </div>
+              <div class="service-info">
+                <h3 class="service-title">Corte Infantil</h3>
+                <p class="service-description">
+                  Cortes especiais para crianças
+                </p>
+              </div>
+              <div class="service-price">
+                <span>R$ 35</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Serviço 6 -->
+          <div class="service-card">
+            <div class="service-card-content">
+              <div class="service-icon">
+                <i class="fas fa-fire"></i>
+              </div>
+              <div class="service-info">
+                <h3 class="service-title">Tratamentos</h3>
+                <p class="service-description">
+                  Hidratação profunda e tratamentos especiais
+                </p>
+              </div>
+              <div class="service-price">
+                <span>R$ 50</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botão de Ação -->
+      <div class="page-footer">
+        <button
+          class="btn btn-secondary ripple"
+          data-action="openModal"
+          data-target="agendarModal"
+        >
+          AGENDAR SERVIÇO
+        </button>
+      </div>
+    </div>
+
+    <!-- Página de Profissionais -->
+    <div id="profissionaisPage" class="app-page">
+      <!-- Cabeçalho da Página -->
+      <div class="page-header">
+        <button class="back-btn" data-action="goHome">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <h2>PROFISSIONAIS</h2>
+        <div class="spacer"></div>
+      </div>
+
+      <!-- Conteúdo da Página -->
+      <div class="page-content">
+        <div class="space-y-6">
+          <!-- Profissional 1 -->
+          <div class="professional-card">
+            <div class="professional-photo">
+              <div class="professional-avatar">
+                <img src="img/barber-1.webp" alt="" />
+              </div>
+            </div>
+            <div class="professional-info">
+              <h3 class="professional-name">Carlos Silva</h3>
+              <p class="professional-title">Barbeiro Master</p>
+              <p class="professional-description">
+                Especialista em cortes clássicos e modernos, com mais de 15 anos
+                de experiência.
+              </p>
+              <div class="professional-social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profissional 2 -->
+          <div class="professional-card">
+            <div class="professional-photo">
+              <div class="professional-avatar">
+                <img src="img/barber-2.webp" alt="" />
+              </div>
+            </div>
+            <div class="professional-info">
+              <h3 class="professional-name">Rafael Oliveira</h3>
+              <p class="professional-title">Especialista em Barba</p>
+              <p class="professional-description">
+                Mestre na arte de modelar e cuidar de barbas, com técnicas
+                exclusivas de hidratação.
+              </p>
+              <div class="professional-social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profissional 3 -->
+          <div class="professional-card">
+            <div class="professional-photo">
+              <div class="professional-avatar">
+                <img src="img/barber-3.webp" alt="" />
+              </div>
+            </div>
+            <div class="professional-info">
+              <h3 class="professional-name">André Santos</h3>
+              <p class="professional-title">Colorista</p>
+              <p class="professional-description">
+                Especialista em coloração e tratamentos capilares, trazendo as
+                últimas tendências.
+              </p>
+              <div class="professional-social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botão de Ação -->
+      <div class="page-footer">
+        <button
+          class="btn btn-secondary ripple"
+          data-action="openModal"
+          data-target="agendarModal"
+        >
+          AGENDAR COM PROFISSIONAL
+        </button>
+      </div>
+    </div>
+
+    <!-- Página de Galeria -->
+    <div id="galeriaPage" class="app-page">
+      <!-- Cabeçalho da Página -->
+      <div class="page-header">
+        <button class="back-btn" data-action="goHome">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <h2>GALERIA</h2>
+        <div class="spacer"></div>
+      </div>
+
+      <!-- Conteúdo da Página -->
+      <div class="page-content">
+        <div class="gallery-grid">
+          <!-- Imagens da Galeria (representadas por divs coloridos) -->
+          <div class="gallery-item">
+            <img src="img/galeria-1.webp" alt="" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/galeria-2.webp" alt="" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/galeria-3.webp" alt="" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/galeria-4.webp" alt="" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/galeria-5.webp" alt="" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/galeria-6.webp" alt="" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/galeria-7.webp" alt="" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/galeria-8.webp" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Botão de Ação -->
+      <div class="page-footer">
+        <button
+          class="btn btn-secondary ripple"
+          data-action="openModal"
+          data-target="agendarModal"
+        >
+          AGENDAR AGORA
+        </button>
+      </div>
+    </div>
+
+    <!-- Página Sobre -->
+    <div id="sobrePage" class="app-page">
+      <!-- Cabeçalho da Página -->
+      <div class="page-header">
+        <button class="back-btn" data-action="goHome">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <h2>SOBRE NÓS</h2>
+        <div class="spacer"></div>
+      </div>
+
+      <!-- Conteúdo da Página -->
+      <div class="page-content">
+        <div class="space-y-6">
+          <div class="about-logo">
+            <!-- Logo da Barbearia -->
+            <img
+              src="img/logo.webp"
+              alt="Logo Barbearia Original"
+              width="96px"
+            />
+          </div>
+          <div class="about-section">
+            <h3 class="about-title">NOSSA HISTÓRIA</h3>
+            <p class="about-text">
+              Fundada em 2010, a Barbearia Original nasceu da paixão por cortes
+              clássicos e modernos. Nossa missão é proporcionar uma experiência
+              única de cuidado masculino, combinando técnicas tradicionais com
+              tendências contemporâneas.
+            </p>
+          </div>
+
+          <div class="about-section">
+            <h3 class="about-title">NOSSOS VALORES</h3>
+            <div class="about-values">
+              <div class="value-item">
+                <i class="fas fa-check-circle"></i>
+                <span class="value-text">Profissionalismo e Qualidade</span>
+              </div>
+              <div class="value-item">
+                <i class="fas fa-check-circle"></i>
+                <span class="value-text">Atendimento Personalizado</span>
+              </div>
+              <div class="value-item">
+                <i class="fas fa-check-circle"></i>
+                <span class="value-text">Ambiente Acolhedor</span>
+              </div>
+              <div class="value-item">
+                <i class="fas fa-check-circle"></i>
+                <span class="value-text">Produtos de Alta Qualidade</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-section">
+            <h3 class="about-title">DIFERENCIAIS</h3>
+            <p class="about-text">
+              Na Barbearia Original, não oferecemos apenas cortes de cabelo e
+              barba, mas uma experiência completa de cuidado masculino, com
+              produtos de alta qualidade e atendimento personalizado.
+            </p>
+          </div>
+
+          <div class="about-section">
+            <h3 class="about-title">CONTATO</h3>
+            <div class="about-values">
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span class="contact-text">(11) 99999-9999</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span class="contact-text"
+                  >contato@barbearia-original.com.br</span
+                >
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-globe"></i>
+                <span class="contact-text">www.barbearia-original.com.br</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" class="social-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botão de Ação -->
+      <div class="page-footer">
+        <button
+          class="btn btn-secondary ripple"
+          data-action="openModal"
+          data-target="agendarModal"
+        >
+          AGENDAR VISITA
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal de Agendamento (único modal) -->
+    <div id="agendarModal" class="modal">
+      <div class="modal-container">
+        <!-- Cabeçalho do Modal -->
+        <div class="modal-header">
+          <button class="back-btn" data-action="closeModal">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <h2>AGENDAR HORÁRIO</h2>
+          <div class="spacer"></div>
+        </div>
+
+        <!-- Conteúdo do Modal -->
+        <div class="modal-content">
+          <form id="agendamentoForm" class="space-y-6">
+            <div class="form-group">
+              <label for="nome" class="form-label">Nome Completo</label>
+              <input
+                type="text"
+                id="nome"
+                class="form-control"
+                placeholder="Seu nome completo"
+              />
+            </div>
+            <div class="form-group">
+              <label for="telefone" class="form-label">Telefone</label>
+              <input
+                type="tel"
+                id="telefone"
+                class="form-control"
+                placeholder="(00) 00000-0000"
+              />
+            </div>
+            <div class="form-group">
+              <label for="data" class="form-label">Data</label>
+              <input type="date" id="data" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="horario" class="form-label">Horário</label>
+              <select id="horario" class="form-control">
+                <option value="">Selecione um horário</option>
+                <option value="09:00">09:00</option>
+                <option value="10:00">10:00</option>
+                <option value="11:00">11:00</option>
+                <option value="12:00">12:00</option>
+                <option value="13:00">13:00</option>
+                <option value="14:00">14:00</option>
+                <option value="15:00">15:00</option>
+                <option value="16:00">16:00</option>
+                <option value="17:00">17:00</option>
+                <option value="18:00">18:00</option>
+                <option value="19:00">19:00</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="servico" class="form-label">Serviço</label>
+              <select id="servico" class="form-control">
+                <option value="">Selecione um serviço</option>
+                <option value="corte">Corte de Cabelo - R$ 45,00</option>
+                <option value="barba">Barba Completa - R$ 35,00</option>
+                <option value="combo">Combo Completo - R$ 75,00</option>
+                <option value="coloracao">Coloração - R$ 60,00</option>
+                <option value="infantil">Corte Infantil - R$ 35,00</option>
+                <option value="tratamento">
+                  Tratamentos Especiais - R$ 50,00
+                </option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="profissional" class="form-label">Profissional</label>
+              <select id="profissional" class="form-control">
+                <option value="">Selecione um profissional</option>
+                <option value="carlos">Carlos Silva - Barbeiro Master</option>
+                <option value="rafael">
+                  Rafael Oliveira - Especialista em Barba
+                </option>
+                <option value="andre">André Santos - Colorista</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="observacoes" class="form-label">Observações</label>
+              <textarea
+                id="observacoes"
+                class="form-control"
+                placeholder="Alguma observação especial?"
+              ></textarea>
+            </div>
+          </form>
+        </div>
+
+        <!-- Botão de Ação -->
+        <div class="modal-footer">
+          <button id="btnAgendar" class="btn btn-secondary ripple">
+            AGENDAR AGORA
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feedback de Sucesso -->
+    <div id="successModal" class="modal">
+      <div class="success-modal-container">
+        <div class="success-icon">
+          <i class="fas fa-check"></i>
+        </div>
+        <h3 class="success-title">Agendamento Realizado!</h3>
+        <p class="success-message">
+          Seu horário foi agendado com sucesso. Em breve entraremos em contato
+          para confirmar.
+        </p>
+        <button class="btn btn-secondary ripple" data-action="successDone">
+          ENTENDI
+        </button>
+      </div>
+    </div>
+
+    <!-- Script para interatividade -->
+    <script src="script.js"></script>
+  </body>
+</html>

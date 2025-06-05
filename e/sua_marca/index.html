@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Sua Marca</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Página Inicial (Home) -->
+    <div id="homePage" class="app-page active">
+      <!-- Logo e Descrição -->
+      <div class="container">
+        <div class="logo-container">
+          <!-- Logo -->
+          <img src="img/logo.svg" alt="" width="200px" />
+        </div>
+
+        <!-- Grade de Botões do App -->
+        <div class="buttons-container">
+          <!-- Botão Contato -->
+          <button class="app-btn ripple text-btn" onclick="goToPage()">
+            <span>Contato</span>
+          </button>
+
+          <!-- Botão Produtos -->
+          <button
+            class="app-btn ripple text-btn"
+            data-action="openPage"
+            data-target="produtosPage"
+          >
+            <span>Produtos</span>
+          </button>
+
+          <!-- Botão Galeria -->
+          <button
+            class="app-btn ripple text-btn"
+            data-action="openPage"
+            data-target="galeriaPage"
+          >
+            <span>Galeria de Imagens</span>
+          </button>
+
+          <!-- Botão Sobre -->
+          <button
+            class="app-btn ripple text-btn"
+            data-action="openPage"
+            data-target="sobrePage"
+          >
+            <span>Sobre</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Página de Produtos -->
+    <div id="produtosPage" class="app-page">
+      <!-- Cabeçalho da Página -->
+      <div class="page-header">
+        <button class="back-btn" data-action="goHome">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <h2>Produtos</h2>
+        <div class="spacer"></div>
+      </div>
+
+      <!-- Conteúdo da Página -->
+      <div class="page-content">
+        <div class="space-y-6">
+          <!-- Produto 1 -->
+          <div class="product-card">
+            <h3 class="product-title">Convites de Casamento</h3>
+            <div class="product-card-content">
+              <div class="product-info">
+                <div class="product-image">
+                  <img src="img/produto-1.jpg" alt="Corte de Cabelo" />
+                </div>
+                <p class="product-description">
+                  O primeiro capítulo do seu "sim" começa aqui. Convites
+                  elegantes e personalizados para o dia mais importante da sua
+                  vida.
+                </p>
+              </div>
+            </div>
+            <div class="product-price">
+              <p>Apartir de R$ 25,00 (mínimo 10 unidades)</p>
+            </div>
+          </div>
+
+          <!-- Produto 2 -->
+          <div class="product-card">
+            <h3 class="product-title">Convites de Aniversário</h3>
+            <div class="product-card-content">
+              <div class="product-info">
+                <div class="product-image">
+                  <img src="img/produto-2.jpg" alt="Corte de Cabelo" />
+                </div>
+                <p class="product-description">
+                  Deixe a festa ainda mais inesquecível com convites criativos e
+                  cheios de alegria para todas as idades.
+                </p>
+              </div>
+            </div>
+            <div class="product-price">
+              <p>Apartir de R$ 20,00 (mínimo 10 unidades)</p>
+            </div>
+          </div>
+
+          <!-- Produto 3 -->
+          <div class="product-card">
+            <h3 class="product-title">Convite Chá de Bebê</h3>
+            <div class="product-card-content">
+              <div class="product-info">
+                <div class="product-image">
+                  <img src="img/produto-3.jpg" alt="Corte de Cabelo" />
+                </div>
+                <p class="product-description">
+                  Anuncie a chegada do seu amor com convites delicados e
+                  charmosos, feitos com carinho.
+                </p>
+              </div>
+            </div>
+            <div class="product-price">
+              <p>Apartir de R$ 22,00 (mínimo 10 unidades)</p>
+            </div>
+          </div>
+
+          <!-- Produto 4 -->
+          <div class="product-card">
+            <h3 class="product-title">Mimos e Lembrancinhas</h3>
+            <div class="product-card-content">
+              <div class="product-info">
+                <div class="product-image">
+                  <img src="img/produto-4.jpg" alt="Corte de Cabelo" />
+                </div>
+                <p class="product-description">
+                  Eternize cada momento com mimos feitos à mão que encantam seus
+                  convidados.
+                </p>
+              </div>
+            </div>
+            <div class="product-price">
+              <p>Apartir de R$ 18,00 (mínimo 10 unidades)</p>
+            </div>
+          </div>
+
+          <!-- Produto 5 -->
+          <div class="product-card">
+            <h3 class="product-title">Cartões Artesanais</h3>
+            <div class="product-card-content">
+              <div class="product-info">
+                <div class="product-image">
+                  <img src="img/produto-5.jpg" alt="Corte de Cabelo" />
+                </div>
+                <p class="product-description">
+                  Declare seu afeto com cartões exclusivos, feitos com amor para
+                  expressar seus sentimentos.
+                </p>
+              </div>
+            </div>
+            <div class="product-price">
+              <p>Apartir de R$ 30,00 (mínimo 10 unidades)</p>
+            </div>
+          </div>
+
+          <!-- Produto 6 -->
+          <div class="product-card">
+            <h3 class="product-title">Cadernos e Blocos</h3>
+            <div class="product-card-content">
+              <div class="product-info">
+                <div class="product-image">
+                  <img src="img/produto-6.jpg" alt="Corte de Cabelo" />
+                </div>
+                <p class="product-description">
+                  Anote seus sonhos e ideias em peças únicas, com design
+                  exclusivo e um toque artesanal.
+                </p>
+              </div>
+            </div>
+            <div class="product-price">
+              <p>Apartir de R$ 45,00 (mínimo 10 unidades)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botão de Ação -->
+      <div class="page-footer">
+        <button
+          class="btn btn-secondary ripple"
+          data-action="openModal"
+          data-target="orcamentoModal"
+        >
+          Pedir Orçamento
+        </button>
+      </div>
+    </div>
+
+    <!-- Página de Galeria -->
+    <div id="galeriaPage" class="app-page">
+      <!-- Cabeçalho da Página -->
+      <div class="page-header">
+        <button class="back-btn" data-action="goHome">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <h2>Galeria de Imagens</h2>
+        <div class="spacer"></div>
+      </div>
+
+      <!-- Conteúdo da Página -->
+      <div class="page-content">
+        <div class="gallery-grid">
+          <!-- Imagens da Galeria (representadas por divs coloridos) -->
+          <div class="gallery-item">
+            <img src="img/image-01.jpg" alt="" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/image-02.jpg" alt="" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/image-03.jpg" alt="" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/image-04.jpg" alt="" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/image-05.jpg" alt="" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/image-06.jpg" alt="" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/image-07.jpg" alt="" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/image-08.jpg" alt="" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/image-09.jpg" alt="" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/image-10.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Botão de Ação -->
+      <div class="page-footer">
+        <button
+          class="btn btn-secondary ripple"
+          data-action="openModal"
+          data-target="orcamentoModal"
+        >
+          Pedir Orçamento
+        </button>
+      </div>
+    </div>
+
+    <!-- Página Sobre -->
+    <div id="sobrePage" class="app-page">
+      <!-- Cabeçalho da Página -->
+      <div class="page-header">
+        <button class="back-btn" data-action="goHome">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <h2>Sobre Nós</h2>
+        <div class="spacer"></div>
+      </div>
+
+      <!-- Conteúdo da Página -->
+      <div class="page-content">
+        <div class="space-y-6">
+          <div class="about-logo">
+            <!-- Logo -->
+            <img src="img/logo.svg" alt="" width="150px" />
+          </div>
+          <div class="about-section">
+            <h3 class="about-title">Nossa História</h3>
+            <p class="about-text">
+              A Sua Marca nasceu de um sonho: transformar papel em memórias e
+              celebrações. Desde o início, nossa paixão foi criar artefatos de
+              papelaria feitos à mão que contam histórias e eternizam momentos
+              especiais. Temos a missão de trazer o toque pessoal e a beleza do
+              artesanato para convites e mimos. A cada peça, dedicamos tempo e
+              carinho, lapidando cada detalhe. O boca a boca e o brilho nos
+              olhos dos nossos clientes nos impulsionaram a crescer, mantendo
+              sempre a essência do feito à mão com amor.
+            </p>
+          </div>
+
+          <div class="about-section">
+            <h3 class="about-title">Nossos Valores</h3>
+            <div class="about-values">
+              <div class="value-item">
+                <i class="fas fa-check-circle"></i>
+                <span class="value-text">Artesanato e Qualidade</span>
+              </div>
+              <div class="value-item">
+                <i class="fas fa-check-circle"></i>
+                <span class="value-text">Criatividade e Inovação</span>
+              </div>
+              <div class="value-item">
+                <i class="fas fa-check-circle"></i>
+                <span class="value-text">Carinho e Afeto</span>
+              </div>
+              <div class="value-item">
+                <i class="fas fa-check-circle"></i>
+                <span class="value-text">Atendimento Personalizado</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-section">
+            <h3 class="about-title">Diferenciais</h3>
+            <p class="about-text">
+              O que nos torna únicos é a combinação de design exclusivo e
+              autoral com o verdadeiro toque artesanal. Cada peça é uma obra de
+              arte criada à mão, garantindo um nível de detalhe e um acabamento
+              que máquinas não conseguem replicar. Oferecemos uma experiência
+              memorável e personalizada, desde o primeiro contato até a entrega.
+            </p>
+          </div>
+
+          <div class="about-section">
+            <h3 class="about-title">Contato</h3>
+            <div class="about-values">
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span class="contact-text">(85) 99999-9999</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span class="contact-text">contato@sua-marca.com.br</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-globe"></i>
+                <span class="contact-text">www.sua-marca.com.br</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" class="social-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botão de Ação -->
+      <div class="page-footer">
+        <button
+          class="btn btn-secondary ripple"
+          data-action="openModal"
+          data-target="orcamentoModal"
+        >
+          Pedir um Orçamento
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal de Orçamento (único modal) -->
+    <div id="orcamentoModal" class="modal">
+      <div class="modal-container">
+        <!-- Cabeçalho do Modal -->
+        <div class="modal-header">
+          <button class="back-btn" data-action="closeModal">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <h2>Peça seu Orçamento</h2>
+          <div class="spacer"></div>
+        </div>
+
+        <!-- Conteúdo do Modal -->
+        <div class="modal-content">
+          <form id="orcamentoForm" class="space-y-6">
+            <div class="form-group">
+              <label for="nome" class="form-label">Nome (obrigatório)</label>
+              <input
+                type="text"
+                id="nome"
+                class="form-control"
+                placeholder="Seu nome"
+              />
+            </div>
+            <div class="form-group">
+              <label for="telefone" class="form-label">Telefone</label>
+              <input
+                type="tel"
+                id="telefone"
+                class="form-control"
+                placeholder="(00) 00000-0000"
+              />
+            </div>
+            <div class="form-group">
+              <label for="data" class="form-label">Data</label>
+              <input type="date" id="data" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="produto" class="form-label"
+                >Produto (obrigatório)</label
+              >
+              <select id="produto" class="form-control">
+                <option value="">Selecione um produto</option>
+                <option value="Convite de Casamento">
+                  Convite de Casamento
+                </option>
+                <option value="Convite de Aniversário">
+                  Convite de Aniversário
+                </option>
+                <option value="Convites Chá de Bebê">
+                  Convites Chá de Bebê
+                </option>
+                <option value="Mimos/Lembrancinhas">Mimos/Lembrancinhas</option>
+                <option value="Cartões Artesanais">Cartões Artesanais</option>
+                <option value="Cadernos/Blocos">Cadernos/Blocos</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="observacoes" class="form-label">Observações</label>
+              <textarea
+                id="observacoes"
+                class="form-control"
+                placeholder="Alguma observação especial?"
+              ></textarea>
+            </div>
+          </form>
+        </div>
+
+        <!-- Botão de Ação -->
+        <div class="modal-footer">
+          <button id="btnOrcamento" class="btn btn-secondary ripple">
+            Enviar Pedido de Orçamento
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feedback de Sucesso -->
+    <div id="successModal" class="modal">
+      <div class="success-modal-container">
+        <div class="success-icon">
+          <i class="fas fa-check"></i>
+        </div>
+        <h3 class="success-title">Pedido enviado!</h3>
+        <p class="success-message">
+          Seu pedido de orçamento foi enviado com sucesso. Em breve entraremos
+          em contato para confirmar.
+        </p>
+        <button class="btn btn-secondary ripple" data-action="successDone">
+          Entendi
+        </button>
+      </div>
+    </div>
+
+    <!-- Script para interatividade -->
+    <script src="script.js"></script>
+  </body>
+</html>

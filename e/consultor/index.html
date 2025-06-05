@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Consultor Honda</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Página Inicial (Home) -->
+    <div id="homePage" class="app-page active">
+      <!-- Logo e Descrição -->
+      <div class="container">
+        <div class="logo-container">
+          <!-- Logo da Barbearia -->
+          <img src="img/logo.webp" alt="" width="150px" />
+          <h1 class="app-title">Antônio Miranda</h1>
+          <p class="app-description">Consultor Honda</p>
+        </div>
+
+        <!-- Grade de Botões do App -->
+        <div class="buttons-grid">
+          <!-- Botão Falar Comigo -->
+          <button
+            class="app-btn ripple"
+            data-action="openModal"
+            data-target="agendarModal"
+          >
+            <div class="icon-circle">
+              <i class="fa-solid fa-message"></i>
+            </div>
+            <span>FALE COMIGO</span>
+          </button>
+
+          <!-- Botão Motos -->
+          <button
+            class="app-btn ripple"
+            data-action="openPage"
+            data-target="motosGaleryPage"
+          >
+            <div class="icon-circle">
+              <i class="fa-solid fa-motorcycle"></i>
+            </div>
+            <span>MOTOS</span>
+          </button>
+
+          <!-- Botão Localização -->
+          <button
+            class="app-btn ripple"
+            data-action="openPage"
+            data-target="localizacaoPage"
+          >
+            <div class="icon-circle">
+              <i class="fa-solid fa-store"></i>
+            </div>
+            <span>LOJA HONDA</span>
+          </button>
+
+          <!-- Botão Sobre -->
+          <button
+            class="app-btn ripple"
+            data-action="openPage"
+            data-target="sobrePage"
+          >
+            <div class="icon-circle">
+              <i class="fa-solid fa-circle-user"></i>
+            </div>
+            <span>SOBRE MIM</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Barra inferior (estilo app) -->
+      <div class="moto-image">
+        <img src="img/hornet-500.webp" alt="" width="250px" />
+      </div>
+      <div class="bottom-bar"></div>
+    </div>
+
+    <!-- Página de Localização -->
+    <div id="localizacaoPage" class="app-page">
+      <!-- Cabeçalho da Página -->
+      <div class="page-header">
+        <button class="back-btn" data-action="goHome">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <h2>LOJA HONDA</h2>
+        <div class="spacer"></div>
+      </div>
+
+      <!-- Conteúdo da Página -->
+      <div class="page-content">
+        <!-- Mapa (representado por um div) -->
+        <div class="map-container">
+          <img src="img/map.webp" alt="" width="100%" />
+        </div>
+
+        <!-- Informações de Endereço -->
+        <div class="space-y-6">
+          <div class="location-section">
+            <h3 class="location-title">ENDEREÇO</h3>
+            <div class="location-item">
+              <div class="location-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="location-content">
+                <p class="location-name">Loja Honda Nova Aliança</p>
+                <p class="location-text">Av. Paulista, 1000 - Bela Vista</p>
+                <p class="location-text">São Paulo - SP, 01310-100</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="location-section">
+            <h3 class="location-title">HORÁRIO DE FUNCIONAMENTO</h3>
+            <div class="location-item">
+              <div class="location-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="location-content">
+                <p class="location-text">Segunda a Sexta: 9h às 20h</p>
+                <p class="location-text">Sábado: 9h às 18h</p>
+                <p class="location-text">Domingo: Fechado</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="location-section">
+            <h3 class="location-title">CONTATO</h3>
+            <div class="location-item">
+              <div class="location-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="location-content">
+                <p class="location-text">(11) 99999-9999</p>
+                <p class="location-text">(11) 3333-3333</p>
+              </div>
+            </div>
+            <div class="location-item">
+              <div class="location-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="location-content">
+                <p class="location-text">contato@barbearia-original.com.br</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botões de Ação -->
+      <div class="page-footer">
+        <div class="location-actions">
+          <button class="btn btn-primary ripple location-btn">
+            <i class="fa-solid fa-comments"></i> MENSAGEM
+          </button>
+          <button class="btn btn-secondary ripple location-btn">
+            <i class="fas fa-directions"></i> COMO CHEGAR
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Página Galeria de Motos -->
+    <div id="motosGaleryPage" class="app-page">
+      <!-- Cabeçalho da Página -->
+      <div class="page-header">
+        <button class="back-btn" data-action="goHome">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <h2>MOTOS</h2>
+        <div class="spacer"></div>
+      </div>
+
+      <!-- Conteúdo da Página -->
+      <div class="page-content">
+        <div class="motos-grid" id="motos-grid">
+          <!-- Imagens das motos (Grids) -->
+        </div>
+      </div>
+
+      <!-- Botão de Ação -->
+      <div class="page-footer">
+        <button
+          class="btn btn-secondary ripple"
+          data-action="openModal"
+          data-target="agendarModal"
+        >
+          MAIS INFORMAÇÕES
+        </button>
+      </div>
+    </div>
+
+    <!-- Página Sobre -->
+    <div id="sobrePage" class="app-page">
+      <!-- Cabeçalho da Página -->
+      <div class="page-header">
+        <button class="back-btn" data-action="goHome">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <h2>SOBRE MIM</h2>
+        <div class="spacer"></div>
+      </div>
+
+      <!-- Conteúdo da Página -->
+      <div class="page-content">
+        <div class="space-y-6">
+          <div class="about-logo">
+            <!-- Logo da Barbearia -->
+            <img src="img/perfil.webp" alt="Antonio Miranda" width="250px" />
+          </div>
+          <div class="about-section">
+            <h3 class="about-title">QUEM SOU EU</h3>
+            <p class="about-text">
+              Sou Antônio Miranda, um consultor de vendas experiente e
+              apaixonado por transformar desafios em oportunidades,
+              especialmente no universo das duas rodas. Com uma trajetória
+              sólida e comprovada, eu me destaco pela minha habilidade em
+              desenvolver estratégias personalizadas que realmente geram
+              resultados para concessionárias e equipes de vendas da Honda
+              Motos.
+            </p>
+          </div>
+
+          <div class="about-section">
+            <h3 class="about-title">CONTATO</h3>
+            <div class="about-values">
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span class="contact-text">(11) 99999-9999</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span class="contact-text">antoniom@honda.com.br</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-globe"></i>
+                <span class="contact-text">www.honda.com.br</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" class="social-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botão de Ação -->
+      <div class="page-footer">
+        <button
+          class="btn btn-secondary ripple"
+          data-action="openModal"
+          data-target="agendarModal"
+        >
+          ENTRAR EM CONTATO
+        </button>
+      </div>
+    </div>
+
+    <!-- Página Informações da Moto -->
+    <div id="motoPage" class="app-page">
+      <!-- Cabeçalho da Página -->
+      <div class="page-header">
+        <button
+          class="back-btn"
+          data-action="openPage"
+          data-target="motosGaleryPage"
+        >
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <h2>INFORMAÇÕES</h2>
+        <div class="spacer"></div>
+      </div>
+
+      <!-- Conteúdo da Página -->
+      <div class="page-content">
+        <!-- Mapa (representado por um div) -->
+        <div class="image-container">
+          <img id="moto-image" src="" alt="" width="100%" />
+        </div>
+
+        <!-- Informações da Moto -->
+        <div class="space-y-6">
+          <h3 id="moto-name"></h3>
+          <p id="moto-description"></p>
+          <p id="moto-price"></p>
+        </div>
+      </div>
+
+      <!-- Botões de Ação -->
+      <div class="page-footer">
+        <div class="moto-actions">
+          <button
+            class="btn btn-primary ripple location-btn"
+            data-action="openModal"
+            data-target="agendarModal"
+          >
+            TENHO INTERESSE
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de Agendamento (único modal) -->
+    <div id="agendarModal" class="modal">
+      <div class="modal-container">
+        <!-- Cabeçalho do Modal -->
+        <div class="modal-header">
+          <button class="back-btn" data-action="closeModal">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <h2>AGENDAR UMA VISITA</h2>
+          <div class="spacer"></div>
+        </div>
+
+        <!-- Conteúdo do Modal -->
+        <div class="modal-content">
+          <form id="agendamentoForm" class="space-y-6">
+            <div class="form-group">
+              <label for="nome" class="form-label">Nome Completo</label>
+              <input
+                type="text"
+                id="nome"
+                class="form-control"
+                placeholder="Seu nome completo"
+              />
+            </div>
+            <div class="form-group">
+              <label for="telefone" class="form-label">Telefone</label>
+              <input
+                type="tel"
+                id="telefone"
+                class="form-control"
+                placeholder="(00) 00000-0000"
+              />
+            </div>
+            <div class="form-group">
+              <label for="modelo" class="form-label">Modelo da moto</label>
+              <select id="modelo" class="form-control">
+                <option value="">Selecione um modelo de moto</option>
+              </select>
+            </div>
+          </form>
+        </div>
+
+        <!-- Botão de Ação -->
+        <div class="modal-footer">
+          <button id="btnAgendar" class="btn btn-secondary ripple">
+            AGENDAR AGORA
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feedback de Sucesso -->
+    <div id="successModal" class="modal">
+      <div class="success-modal-container">
+        <div class="success-icon">
+          <i class="fas fa-check"></i>
+        </div>
+        <h3 class="success-title">Agendamento Realizado!</h3>
+        <p class="success-message">
+          Seu horário foi agendado com sucesso. Em breve entraremos em contato
+          para confirmar.
+        </p>
+        <button class="btn btn-secondary ripple" data-action="successDone">
+          ENTENDI
+        </button>
+      </div>
+    </div>
+
+    <!-- Script para interatividade -->
+    <script src="db.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

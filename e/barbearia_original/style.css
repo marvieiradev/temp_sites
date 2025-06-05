@@ -1,0 +1,835 @@
+/* Importação de fontes */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variáveis CSS para cores */
+:root {
+  --barber-primary: #4a1e5f;
+  --barber-secondary: #e67e22;
+  --barber-dark: #121212;
+  --barber-darkgray: #1e1e1e;
+  --barber-light: #f5f5f5;
+  --white: #ffffff;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-700: #374151;
+  --green-500: #10b981;
+  --red-500: #ef4444;
+}
+
+/* Estilos base */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  touch-action: manipulation;
+  font-family: "Poppins", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  background-color: var(--barber-dark);
+  color: var(--barber-light);
+  position: fixed;
+  max-width: 100vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif;
+}
+
+/* Estilos para páginas */
+.app-page {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateX(20px);
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+}
+
+.app-page.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+  display: flex;
+}
+
+/* Cabeçalho das páginas */
+.page-header {
+  background-color: var(--barber-primary);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-header h2 {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.back-btn {
+  color: var(--white);
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.spacer {
+  width: 24px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+/* Conteúdo das páginas */
+.page-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+  -webkit-overflow-scrolling: touch;
+  max-height: calc(100% - 120px); /* Ajuste para evitar overflow */
+}
+
+/* Rodapé das páginas */
+.page-footer {
+  padding: 24px;
+  background-color: var(--barber-darkgray);
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  padding: 16px;
+  background-color: var(--barber-secondary);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  font-family: "Oswald", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background-color: var(--barber-primary);
+}
+
+.btn-secondary {
+  background-color: var(--barber-secondary);
+}
+
+/* Efeito de ripple para botões */
+.ripple:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform 0.5s, opacity 1s;
+}
+
+.ripple:active:after {
+  transform: scale(0, 0);
+  opacity: 0.3;
+  transition: 0s;
+}
+
+/* Animações para botões */
+.app-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--barber-primary);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.app-btn:active {
+  transform: scale(0.95);
+}
+
+.app-btn .icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--barber-darkgray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.app-btn .icon-circle i {
+  color: var(--barber-secondary);
+  font-size: 20px;
+}
+
+.app-btn span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* Grid de botões */
+.buttons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 0 24px 24px 24px;
+}
+
+/* Logo e descrição */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px 24px 24px;
+}
+
+.app-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.app-description {
+  font-size: 14px;
+  color: var(--gray-300);
+  text-align: center;
+}
+
+/* Barra inferior */
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: var(--barber-secondary);
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.modal.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  display: flex;
+}
+
+.modal-container {
+  background-color: var(--barber-dark);
+  width: 100%;
+  height: 100%;
+  max-width: 480px;
+  max-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  background-color: var(--barber-primary);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-header h2 {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.modal-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+}
+
+.modal-footer {
+  padding: 24px;
+  background-color: var(--barber-darkgray);
+}
+
+/* Success Modal */
+.success-modal-container {
+  background-color: var(--barber-dark);
+  width: 83.333%;
+  max-width: 384px;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 24px;
+  text-align: center;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--green-500);
+  margin: 0 auto 16px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-icon i {
+  color: var(--white);
+  font-size: 32px;
+}
+
+.success-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.success-message {
+  color: var(--gray-300);
+  margin-bottom: 24px;
+}
+
+/* Formulário */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-label {
+  display: block;
+  color: var(--white);
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: var(--barber-darkgray);
+  border: 1px solid var(--gray-700);
+  border-radius: 8px;
+  color: var(--white);
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--barber-secondary);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Cartões de serviços */
+.service-card {
+  background-color: var(--barber-darkgray);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+}
+
+.service-card-content {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--barber-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+}
+
+.service-icon i {
+  color: var(--barber-secondary);
+  font-size: 20px;
+}
+
+.service-info {
+  flex: 1;
+}
+
+.service-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--barber-secondary);
+}
+
+.service-description {
+  font-size: 14px;
+  color: var(--gray-300);
+}
+
+.service-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--white);
+  text-align: right;
+}
+
+/* Cartões de profissionais */
+.professional-card {
+  background-color: var(--barber-darkgray);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+  display: flex;
+}
+
+.professional-photo {
+  width: 33.333%;
+  background-color: var(--barber-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.professional-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.professional-avatar img {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.professional-info {
+  width: 66.667%;
+  padding: 16px;
+}
+
+.professional-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--barber-secondary);
+}
+
+.professional-title {
+  font-size: 14px;
+  color: var(--gray-400);
+  margin-bottom: 8px;
+}
+
+.professional-description {
+  font-size: 12px;
+  color: var(--gray-300);
+}
+
+.professional-social {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.professional-social a {
+  color: var(--barber-secondary);
+  transition: color 0.3s ease;
+}
+
+.professional-social a:hover {
+  color: var(--white);
+}
+
+/* Galeria */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.gallery-item {
+  height: 160px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-item img {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Sobre */
+.about-logo {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px auto;
+}
+
+.about-section {
+  margin-bottom: 24px;
+}
+
+.about-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--barber-secondary);
+  margin-bottom: 8px;
+}
+
+.about-text {
+  font-size: 14px;
+  color: var(--gray-300);
+}
+
+.about-values {
+  margin-top: 8px;
+}
+
+.value-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.value-item i {
+  color: var(--barber-secondary);
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.value-text {
+  font-size: 14px;
+  color: var(--gray-300);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.contact-item i {
+  color: var(--barber-secondary);
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.contact-text {
+  font-size: 14px;
+  color: var(--gray-300);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding-top: 16px;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--barber-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--barber-secondary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: var(--barber-secondary);
+  color: var(--white);
+}
+
+/* Localização */
+.map-container {
+  background-color: var(--barber-darkgray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.map-icon {
+  font-size: 48px;
+  color: var(--barber-secondary);
+  margin-bottom: 16px;
+}
+
+.map-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.map-description {
+  color: var(--gray-300);
+}
+
+.location-section {
+  margin-bottom: 24px;
+}
+
+.location-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--barber-secondary);
+  margin-bottom: 12px;
+}
+
+.location-item {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.location-icon {
+  color: var(--barber-secondary);
+  font-size: 18px;
+  margin-right: 12px;
+  margin-top: 4px;
+}
+
+.location-content {
+  flex: 1;
+}
+
+.location-name {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.location-text {
+  color: var(--gray-300);
+}
+
+.location-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.location-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location-btn i {
+  margin-right: 8px;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.back-btn:active {
+  animation: pulse 0.3s ease;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 0.3s ease forwards;
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.slide-out-right {
+  animation: slideOutRight 0.3s ease forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.slide-down {
+  animation: slideDown 0.3s ease forwards;
+}
+
+/* Animação para carregamento da página */
+.app-container {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: appLoad 0.5s ease forwards 0.2s;
+}
+
+@keyframes appLoad {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos para scrollbar */
+.app-page::-webkit-scrollbar,
+.modal-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.app-page::-webkit-scrollbar-track,
+.modal-content::-webkit-scrollbar-track {
+  background: rgba(30, 30, 30, 0.5);
+}
+
+.app-page::-webkit-scrollbar-thumb,
+.modal-content::-webkit-scrollbar-thumb {
+  background: var(--barber-primary);
+  border-radius: 4px;
+}
+
+/* Utilitários */
+.mb-6 {
+  margin-bottom: 24px;
+}
+
+.space-y-6 > * + * {
+  margin-top: 24px;
+}
+
+.space-y-2 > * + * {
+  margin-top: 8px;
+}

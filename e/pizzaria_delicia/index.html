@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Pizzaria Delícia</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Página Inicial (Home) -->
+    <div id="homePage" class="app-page active">
+      <!-- Logo e Descrição -->
+      <div class="container">
+        <div class="logo-container">
+          <img src="img/logo-pizza.png" alt="" width="120px" />
+          <h1 class="app-title">Pizzaria Delícia</h1>
+          <p class="app-description">Sabor e tradição em cada fatia.</p>
+        </div>
+
+        <!-- Grade de Botões do App -->
+        <div class="buttons-grid">
+          <!-- Botão Fale coma a gente -->
+          <button class="app-btn ripple" data-action="goWhatsapp">
+            <div class="icon-circle">
+              <i class="fas fa-message"></i>
+            </div>
+            <span>Fale com a gente</span>
+          </button>
+
+          <!-- Botão Cardapio -->
+          <button
+            class="app-btn ripple"
+            data-action="openPage"
+            data-target="cardapioPage"
+          >
+            <div class="icon-circle">
+              <i class="fas fa-pizza-slice"></i>
+            </div>
+            <span>Cardápio</span>
+          </button>
+
+          <!-- Botão Localização -->
+          <button
+            class="app-btn ripple"
+            data-action="openPage"
+            data-target="localizacaoPage"
+          >
+            <div class="icon-circle">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <span>Nossa Localização</span>
+          </button>
+
+          <!-- Botão Galeria -->
+          <button
+            class="app-btn ripple"
+            data-action="openPage"
+            data-target="galeriaPage"
+          >
+            <div class="icon-circle">
+              <i class="fas fa-images"></i>
+            </div>
+            <span>Galeria de Fotos</span>
+          </button>
+
+          <!-- Botão Sobre -->
+          <button
+            class="app-btn ripple"
+            data-action="openPage"
+            data-target="sobrePage"
+          >
+            <div class="icon-circle">
+              <i class="fas fa-info-circle"></i>
+            </div>
+            <span>Sobre</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Página de Localização -->
+    <div id="localizacaoPage" class="app-page">
+      <!-- Cabeçalho da Página -->
+      <div class="page-header">
+        <button class="back-btn" data-action="goHome">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <h2>Nossa Localização</h2>
+        <div class="spacer"></div>
+      </div>
+
+      <!-- Conteúdo da Página -->
+      <div class="page-content">
+        <!-- Mapa (representado por um div) -->
+        <div class="map-container">
+          <img src="img/map.webp" alt="" width="100%" />
+        </div>
+
+        <!-- Informações de Endereço -->
+        <div class="space-y-6">
+          <div class="location-section">
+            <h3 class="location-title">Endereço</h3>
+            <div class="location-item">
+              <div class="location-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="location-content">
+                <p class="location-name">Pizzaria Delicia</p>
+                <p class="location-text">Av. Paulista, 1000 - Bela Vista</p>
+                <p class="location-text">São Paulo - SP, 01310-100</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="location-section">
+            <h3 class="location-title">Horário de Atendimento</h3>
+            <div class="location-item">
+              <div class="location-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="location-content">
+                <p class="location-text">Segunda a Sexta: 18h às 23h</p>
+                <p class="location-text">Sábado: 18h às 01h</p>
+                <p class="location-text">Domingo: Fechado</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="location-section">
+            <h3 class="location-title">Contato</h3>
+            <div class="location-item">
+              <div class="location-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="location-content">
+                <p class="location-text">(11) 99999-9999</p>
+                <p class="location-text">(11) 3333-3333</p>
+              </div>
+            </div>
+            <div class="location-item">
+              <div class="location-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="location-content">
+                <p class="location-text">contato@pizzaria-delicia.com.br</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botões de Ação -->
+      <div class="page-footer">
+        <div class="location-actions">
+          <button class="btn btn-primary ripple location-btn">
+            <i class="fas fa-message"></i> Mensagem
+          </button>
+          <button class="btn btn-secondary ripple location-btn">
+            <i class="fas fa-directions"></i> Como Chegar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Página de Cardápio -->
+    <div id="cardapioPage" class="app-page">
+      <!-- Cabeçalho da Página -->
+      <div class="page-header">
+        <button class="back-btn" data-action="goHome">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <h2>Cardápio</h2>
+        <div class="spacer"></div>
+      </div>
+
+      <!-- Conteúdo da Página -->
+      <div class="page-content">
+        <div class="space-y-6">
+          <!-- Pizza Meio a Meio -->
+          <h3 class="category-name">PIZZA MEIO A MEIO</h3>
+          <div class="product-card">
+            <div class="product-card-content">
+              <div class="product-icon">
+                <i class="fas fa-pizza-slice"></i>
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Monte sua Pizza</h3>
+                <p class="product-description">
+                  Escolha dois sabores para sua pizza
+                </p>
+              </div>
+            </div>
+
+            <div
+              style="
+                padding: 16px;
+                background-color: rgba(0, 0, 0, 0.2);
+                border-radius: 0 0 8px 8px;
+              "
+            >
+              <div class="form-group">
+                <label for="half1" class="form-label">Primeiro Sabor</label>
+                <select id="half1" class="form-control">
+                  <option value="">Selecione o primeiro sabor</option>
+                </select>
+              </div>
+
+              <div class="form-group" style="margin-top: 12px">
+                <label for="half2" class="form-label">Segundo Sabor</label>
+                <select id="half2" class="form-control">
+                  <option value="">Selecione o segundo sabor</option>
+                </select>
+              </div>
+
+              <div style="text-align: right; margin-top: 16px">
+                <button
+                  id="add-half-pizza"
+                  style="padding: 8px 16px"
+                >
+                  <i class="fas fa-plus"></i> Adicionar Meio a Meio
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Categoria: Pizzas Tradicionais -->
+          <div>
+            <h3 class="category-name">PIZZAS TRADICIONAIS</h3>
+            <div id="pizzas"></div>
+          </div>
+
+          <!-- Categoria: Bebidas -->
+          <div>
+            <h3 class="category-name">BEBIDAS</h3>
+            <div id="bebidas"></div>
+          </div>
+
+          <!-- Categoria: Sobremesas -->
+          <div>
+            <h3 class="category-name">SOBREMESAS</h3>
+            <div id="sobremesas"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botão de Ação -->
+      <div class="page-footer">
+        <button
+          class="btn btn-secondary ripple"
+          data-action="openModal"
+          data-target="carrinhoModal"
+        >
+          <i class="fas fa-shopping-cart"></i> VER CARRINHO
+          <span id="cart-count" class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Página de Galeria -->
+    <div id="galeriaPage" class="app-page">
+      <!-- Cabeçalho da Página -->
+      <div class="page-header">
+        <button class="back-btn" data-action="goHome">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <h2>Galeria de Fotos</h2>
+        <div class="spacer"></div>
+      </div>
+
+      <!-- Conteúdo da Página -->
+      <div class="page-content">
+        <div class="gallery-grid">
+          <!-- Imagens da Galeria (representadas por divs coloridos) -->
+          <div class="gallery-item">
+            <img src="img/galeria-1.webp" alt="" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/galeria-2.webp" alt="" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/galeria-3.webp" alt="" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/galeria-4.webp" alt="" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/galeria-5.webp" alt="" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/galeria-6.webp" alt="" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/galeria-7.webp" alt="" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/galeria-8.webp" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Botão de Ação -->
+      <div class="page-footer">
+        <button
+          class="btn btn-secondary ripple"
+          data-action="openPage"
+          data-target="cardapioPage"
+        >
+          Faça um Pedido
+        </button>
+      </div>
+    </div>
+
+    <!-- Página Sobre -->
+    <div id="sobrePage" class="app-page">
+      <!-- Cabeçalho da Página -->
+      <div class="page-header">
+        <button class="back-btn" data-action="goHome">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <h2>Sobre Nós</h2>
+        <div class="spacer"></div>
+      </div>
+
+      <!-- Conteúdo da Página -->
+      <div class="page-content">
+        <div class="space-y-6">
+          <div class="about-logo">
+            <img src="img/logo-pizza.png" alt="" width="80px" />
+          </div>
+
+          <div class="about-section">
+            <h3 class="about-title">Nossa História</h3>
+            <p class="about-text">
+              Na Pizzaria Delícia, acreditamos que uma pizza vai muito além de
+              farinha, água e molho: é uma celebração de sabores, momentos e
+              memórias. Desde 2020, temos nos dedicado a trazer a autêntica
+              experiência da pizza italiana para o seu prato, com um toque
+              especial que só a Delícia oferece.
+            </p>
+          </div>
+
+          <div class="about-section">
+            <h3 class="about-title">Nossos Valores</h3>
+            <div class="about-values">
+              <div class="value-item">
+                <i class="fas fa-check-circle"></i>
+                <span class="value-text">Tradição e Qualidade</span>
+              </div>
+              <div class="value-item">
+                <i class="fas fa-check-circle"></i>
+                <span class="value-text">Paixão pelo Sabor</span>
+              </div>
+              <div class="value-item">
+                <i class="fas fa-check-circle"></i>
+                <span class="value-text">Atendimento Acolhedor</span>
+              </div>
+              <div class="value-item">
+                <i class="fas fa-check-circle"></i>
+                <span class="value-text">Inovação e Criatividade</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-section">
+            <h3 class="about-title">Diferenciais</h3>
+            <p class="about-text">
+              Na Pizzaria Delícia, o que nos torna únicos é a nossa massa
+              exclusiva de fermentação natural de 48 horas, assada em forno a
+              lenha com ingredientes frescos e locais, garantindo uma pizza
+              leve, crocante e com um sabor incomparável, que você só encontra
+              aqui!
+            </p>
+          </div>
+
+          <div class="about-section">
+            <h3 class="about-title">Contato</h3>
+            <div class="about-values">
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span class="contact-text">(11) 99999-9999</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span class="contact-text"
+                  >contato@pizzaria-delicia.com.br</span
+                >
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-globe"></i>
+                <span class="contact-text">www.pizzaria-delicia.com.br</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" class="social-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botão de Ação -->
+      <div class="page-footer">
+        <button
+          class="btn btn-secondary ripple"
+          data-action="openPage"
+          data-target="cardapioPage"
+        >
+          Faça um Pedido
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal do Carrinho -->
+    <div id="carrinhoModal" class="modal">
+      <div class="modal-container">
+        <!-- Cabeçalho do Modal -->
+        <div class="modal-header">
+          <button class="back-btn" data-action="closeModal">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <h2>Seu Pedido</h2>
+          <div class="spacer"></div>
+        </div>
+
+        <!-- Conteúdo do Modal -->
+        <div class="modal-content">
+          <div id="cart-items" class="space-y-6">
+            <!-- Os itens do carrinho serão inseridos aqui dinamicamente -->
+            <div class="empty-cart-message">
+              <p>Seu carrinho está vazio</p>
+            </div>
+          </div>
+
+          <!-- Observações do pedido -->
+          <div class="space-y-6 order-note">
+            <h3>OBSERVAÇÕES DO PEDIDO</h3>
+            <div class="form-content">
+              <div class="form-group">
+                <label for="address" class="form-label">Seu Endereço</label>
+                <input
+                type="text"
+                  id="address"
+                  class="form-control"
+                  placeholder="Digite seu Endereço"
+                  style="margin-bottom: 14px;"
+                ></input>
+                <label for="order-notes" class="form-label">Observações</label>
+                <textarea
+                  id="order-notes"
+                  class="form-control"
+                  placeholder="Alguma observação para o seu pedido? Ex: sem cebola, bem passado, etc."
+                ></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Total -->
+          <div class="total-content">
+            <div class="subtotal-info">
+              <span>Subtotal:</span>
+              <span id="cart-subtotal">R$ 0,00</span>
+            </div>
+            <div class="total-info">
+              <span>Total:</span>
+              <span id="cart-total">R$ 0,00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botões de Ação -->
+        <div class="modal-footer">
+          <button id="clear-cart" class="btn btn-primary ripple">
+            <i class="fas fa-trash"></i> LIMPAR CARRINHO
+          </button>
+          <button id="send-order" class="btn btn-secondary ripple">
+            <i class="fas fa-paper-plane"></i> ENVIAR PEDIDO VIA WHATSAPP
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Ok -->
+    <div id="successModal" class="modal">
+      <div class="success-modal-container">
+        <div class="success-icon">
+          <i class="fas fa-check"></i>
+        </div>
+        <h3 class="success-title">Agendamento Realizado!</h3>
+        <p class="success-message">
+          Seu horário foi agendado com sucesso. Em breve entraremos em contato
+          para confirmar.
+        </p>
+        <button class="btn btn-secondary ripple" data-action="successDone">
+          ENTENDI
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal Info -->
+    <div id="infoModal" class="modal">
+      <div class="info-modal-container">
+        <div class="info-icon">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </div>
+        <p class="info-message" id="info-message"></p>
+        <button class="btn btn-secondary ripple" data-action="infoDone">
+          Ok
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal Confirm -->
+    <div id="confirmModal" class="modal">
+      <div class="confirm-modal-container">
+        <div class="confirm-icon">
+          <i class="fa-solid fa-circle-question"></i>
+        </div>
+        <p class="confirm-message">Deseja limpar o carrinho?</p>
+        <div class="btn-container">
+          <button class="btn btn-secondary yes ripple" data-action="yesOption">
+            Sim
+          </button>
+          <button class="btn btn-secondary no ripple" data-action="noOption">
+            Não
+          </button>
+        </div>
+      </div>
+    </div>
+
+     <!-- Modal Toast -->
+     <div id="toastModal" class="modal">
+      <div class="toast-modal-container">
+        <div class="toast-icon">
+          <i class="fas fa-check"></i>
+        </div>
+        <p class="toast-message">Adicionado ao Carrinho</p>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="db.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
