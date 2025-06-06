@@ -425,7 +425,7 @@ textarea.form-control {
 
 #detalhes {
   padding: 10px;
-  line-height: 1rem;
+  line-height: 16px;
   font-size: 14px;
   color: var(--white);
   background-color: var(--dark);
