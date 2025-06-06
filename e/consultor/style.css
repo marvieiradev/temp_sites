@@ -78,7 +78,7 @@ h6 {
 .moto-image {
   display: flex;
   justify-content: center;
-  margin-bottom: 15px;
+  margin-top: -50px;
 }
 
 /* Cabeçalho das páginas */
@@ -347,14 +347,14 @@ h6 {
 }
 
 .success-title {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
-  color: var(--white);
+  color: var(--primary);
   margin-bottom: 8px;
 }
 
 .success-message {
-  color: var(--gray-300);
+  color: var(--gray-700);
   margin-bottom: 24px;
 }
 

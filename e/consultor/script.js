@@ -164,6 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
       '<i class="fas fa-spinner fa-spin" style="margin-right: 8px;"></i> PROCESSANDO...';
     this.disabled = true;
 
+    //Enviar pro Whatsapp
     formatOrderForWhatsApp(nome, telefone, modelo);
 
     // Simular processamento
@@ -263,12 +264,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Formatar agendamento para WhatsApp
   function formatOrderForWhatsApp(nome, telefone, modelo) {
-    let message = "*AGENDAMENTO DE VISITA*\n\n";
+    let message = "*Olá Antônio. Gostaria de Agendar uma visita!*\n\n";
     message += "*INFORMAÇÕES:*\n";
-    message += `\n*Nome: ${nome}*\n\n`;
-    message += `\n*Telefone: ${telefone}*\n\n`;
+    message += `\n*Nome: ${nome}*\n`;
+    message += `\n*Telefone: ${telefone}*\n`;
     if (modelo && modelo.trim() !== "")
-      message += `\n*Modelo de Interesse: ${modelo}*\n\n`;
+      message += `\n*Modelo de Interesse: ${modelo}*\n`;
 
     const phoneNumber = "5585996380088";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
