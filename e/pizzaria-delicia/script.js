@@ -537,7 +537,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message
     )}`;
-    window.open(whatsappUrl, "_blank");
+    openModal("successModal");
+    //window.open(whatsappUrl, "_blank");
   });
 
   //Fale com a gente
