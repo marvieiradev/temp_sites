@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Função para fechar modal
   function closeModal(modalId) {
-    const modal = document.getElementById(modalId || "orcamentoModal");
+    const modal = document.getElementById(modalId || "agendarModal");
     if (modal) {
       modal.classList.remove("active");
 
@@ -119,6 +119,9 @@ document.addEventListener("DOMContentLoaded", function () {
         case "closeModal":
           closeModal(target);
           break;
+        case "goInstagram":
+          goInstagram();
+          break;
         case "successDone":
           // Fechar o modal de sucesso e voltar para a tela inicial
           closeModal("successModal");
@@ -151,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         setTimeout(() => {
           this.classList.remove("alert");
-          this.innerHTML = "Enviar Pedido de Orçamento";
+          this.innerHTML = "Agendar Consulta";
         }, 2000);
 
         return;
@@ -174,14 +177,14 @@ document.addEventListener("DOMContentLoaded", function () {
       // Simular processamento
       setTimeout(() => {
         // Fechar modal atual
-        closeModal("orcamentoModal");
+        closeModal("agendarModal");
 
         // Abrir modal de sucesso
         setTimeout(() => {
           openModal("successModal");
 
           // Resetar formulário
-          document.getElementById("orcamentoForm").reset();
+          document.getElementById("agendarForm").reset();
 
           // Restaurar botão
           this.innerHTML = "Enviar Pedido de Orçamento";
@@ -201,6 +204,10 @@ document.addEventListener("DOMContentLoaded", function () {
       this.style.opacity = "1";
     });
   });
+
+  function goInstagram() {
+    location.href = "https://www.instagram.com/";
+  }
 });
 
 function goToPage() {

@@ -180,7 +180,6 @@ h6 {
 /* Animações para botões */
 .app-btn {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: var(--primary);
@@ -190,6 +189,7 @@ h6 {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   border: 2px solid var(--white);
   color: var(--white);
+  position: relative;
   cursor: pointer;
 }
 
@@ -197,8 +197,10 @@ h6 {
   transform: scale(0.95);
 }
 
-.app-btn .icon-circle i {
-  color: var(--secondary);
+.app-btn i {
+  position: absolute;
+  left: 10%;
+  color: var(--white);
   font-size: 20px;
 }
 
@@ -226,7 +228,7 @@ h6 {
 }
 
 .app-title {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: bold;
   color: var(--primary);
   text-align: center;
@@ -236,6 +238,7 @@ h6 {
 .app-description {
   font-size: 16px;
   color: var(--accent);
+  font-weight: bold;
   text-align: center;
 }
 
@@ -528,6 +531,7 @@ textarea.form-control {
   color: var(--primary);
   font-size: 14px;
   margin-bottom: 4px;
+  font-weight: 600;
 }
 
 .contact-item i {

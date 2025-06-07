@@ -20,7 +20,7 @@
       <div class="container">
         <div class="logo-container">
           <!-- Logo -->
-          <img src="img/dra-vitoria.webp" alt="" width="240px" />
+          <img src="img/dra.webp" alt="" width="280px" />
           <h1 class="app-title">Dra. Vitória Alencar</h1>
           <p class="app-description">
             Transforme sua relação com a alimentação
@@ -30,12 +30,19 @@
         <!-- Grade de Botões do App -->
         <div class="buttons-container">
           <!-- Botão Contato -->
-          <button class="app-btn ripple text-btn" onclick="goToPage()">
+          <button
+            class="app-btn ripple text-btn"
+            style="background-color: var(--accent)"
+            data-action="openModal"
+            data-target="agendarModal"
+          >
+            <i class="fa-solid fa-user-doctor"></i>
             <span>Agendar Consulta</span>
           </button>
 
-          <!-- Botão Galeria -->
-          <button class="app-btn ripple text-btn">
+          <!-- Botão Redes Sociais -->
+          <button class="app-btn ripple text-btn" data-action="goInstagram">
+            <i class="fa-brands fa-instagram"></i>
             <span>Redes Sociais</span>
           </button>
 
@@ -45,6 +52,7 @@
             data-action="openPage"
             data-target="servicePage"
           >
+            <i class="fa-solid fa-apple-whole"></i>
             <span>Serviços</span>
           </button>
 
@@ -54,6 +62,7 @@
             data-action="openPage"
             data-target="sobrePage"
           >
+            <i class="fa-solid fa-address-card"></i>
             <span>Sobre</span>
           </button>
         </div>
@@ -129,7 +138,7 @@
         <button
           class="btn btn-secondary ripple"
           data-action="openModal"
-          data-target="orcamentoModal"
+          data-target="agendarModal"
         >
           Agendar Consulta
         </button>
@@ -241,7 +250,7 @@
         <button
           class="btn btn-secondary ripple"
           data-action="openModal"
-          data-target="orcamentoModal"
+          data-target="agendarModal"
         >
           Agendar Consulta
         </button>
@@ -249,7 +258,7 @@
     </div>
 
     <!-- Modal de Orçamento (único modal) -->
-    <div id="orcamentoModal" class="modal">
+    <div id="agendarModal" class="modal">
       <div class="modal-container">
         <!-- Cabeçalho do Modal -->
         <div class="modal-header">
@@ -262,7 +271,7 @@
 
         <!-- Conteúdo do Modal -->
         <div class="modal-content">
-          <form id="orcamentoForm" class="space-y-6">
+          <form id="agendarForm" class="space-y-6">
             <div class="form-group">
               <label for="nome" class="form-label">Nome Completo*</label>
               <input
