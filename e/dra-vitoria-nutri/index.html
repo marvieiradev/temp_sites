@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Dra. Vitória - Nutricionista</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Página Inicial (Home) -->
+    <div id="homePage" class="app-page active">
+      <!-- Logo e Descrição -->
+      <div class="container">
+        <div class="logo-container">
+          <!-- Logo -->
+          <img src="img/dra-vitoria.webp" alt="" width="240px" />
+          <h1 class="app-title">Dra. Vitória Alencar</h1>
+          <p class="app-description">
+            Transforme sua relação com a alimentação
+          </p>
+        </div>
+
+        <!-- Grade de Botões do App -->
+        <div class="buttons-container">
+          <!-- Botão Contato -->
+          <button class="app-btn ripple text-btn" onclick="goToPage()">
+            <span>Agendar Consulta</span>
+          </button>
+
+          <!-- Botão Galeria -->
+          <button class="app-btn ripple text-btn">
+            <span>Redes Sociais</span>
+          </button>
+
+          <!-- Botão Serviços -->
+          <button
+            class="app-btn ripple text-btn"
+            data-action="openPage"
+            data-target="servicePage"
+          >
+            <span>Serviços</span>
+          </button>
+
+          <!-- Botão Sobre -->
+          <button
+            class="app-btn ripple text-btn"
+            data-action="openPage"
+            data-target="sobrePage"
+          >
+            <span>Sobre</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Página de Produtos -->
+    <div id="servicePage" class="app-page">
+      <!-- Cabeçalho da Página -->
+      <div class="page-header">
+        <button class="back-btn" data-action="goHome">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <h2>Nossos Serviços</h2>
+        <div class="spacer"></div>
+      </div>
+
+      <!-- Conteúdo da Página -->
+      <div class="page-content">
+        <div class="space-y-6">
+          <!-- Serviço 1 -->
+          <div class="service-card">
+            <div class="service-image" style="background-color: #4d7c0f">
+              <i class="fas fa-apple-alt"></i>
+            </div>
+            <div class="service-card-content">
+              <div class="service-info">
+                <h3 class="service-title">Consulta Nutricional</h3>
+                <p class="service-description">
+                  Avaliação completa do seu estado nutricional, histórico
+                  alimentar e objetivos para criar um plano personalizado.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Serviço 2 -->
+          <div class="service-card">
+            <div class="service-image" style="background-color: #65a30d">
+              <i class="fas fa-heartbeat"></i>
+            </div>
+            <div class="service-card-content">
+              <div class="service-info">
+                <h3 class="service-title">Nutrição Esportiva</h3>
+                <p class="service-description">
+                  Planos alimentares específicos para atletas e praticantes de
+                  atividades físicas, visando melhor desempenho e recuperação.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Serviço 3 -->
+          <div class="service-card">
+            <div class="service-image" style="background-color: #166534">
+              <i class="fas fa-utensils"></i>
+            </div>
+            <div class="service-card-content">
+              <div class="service-info">
+                <h3 class="service-title">Reeducação Alimentar</h3>
+                <p class="service-description">
+                  Aprenda a desenvolver uma relação saudável com a comida, sem
+                  dietas restritivas, focando em mudanças sustentáveis.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botão de Ação -->
+      <div class="page-footer">
+        <button
+          class="btn btn-secondary ripple"
+          data-action="openModal"
+          data-target="orcamentoModal"
+        >
+          Agendar Consulta
+        </button>
+      </div>
+    </div>
+
+    <!-- Página Sobre -->
+    <div id="sobrePage" class="app-page">
+      <!-- Cabeçalho da Página -->
+      <div class="page-header">
+        <button class="back-btn" data-action="goHome">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <h2>Sobre Dra. Vitória</h2>
+        <div class="spacer"></div>
+      </div>
+
+      <!-- Conteúdo da Página -->
+      <div class="page-content">
+        <div class="space-y-6">
+          <div class="about-logo">
+            <!-- Logo -->
+            <img src="img/sobre.webp" alt="" width="80%" />
+          </div>
+          <div class="about-section">
+            <h3 class="about-title">
+              Nutrição personalizada para cada fase da vida
+            </h3>
+            <p class="about-text">
+              Com mais de 10 anos de experiência, a Dra. Vitória Alimentos é
+              especialista em nutrição clínica e funcional, ajudando pessoas a
+              transformarem suas vidas através da alimentação consciente e
+              equilibrada.
+            </p>
+          </div>
+
+          <div class="about-section">
+            <p class="about-text">
+              Formada pela Universidade Federal de Nutrição com especialização
+              em Nutrição Esportiva e Comportamental, a Dra. Vitória acredita
+              que cada pessoa possui necessidades nutricionais únicas que devem
+              ser respeitadas.
+            </p>
+          </div>
+
+          <div class="about-section">
+            <div class="about-values">
+              <div class="value-item">
+                <i class="fas fa-check-circle"></i>
+                <span class="value-text">Nutrição Clínica</span>
+              </div>
+              <div class="value-item">
+                <i class="fas fa-check-circle"></i>
+                <span class="value-text">Nutrição Funcional</span>
+              </div>
+              <div class="value-item">
+                <i class="fas fa-check-circle"></i>
+                <span class="value-text">Nutrição Esportiva</span>
+              </div>
+              <div class="value-item">
+                <i class="fas fa-check-circle"></i>
+                <span class="value-text">Reeducação Alimentar</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-section">
+            <h3 class="about-title">Contato</h3>
+            <div class="about-values">
+              <div class="contact-item">
+                <span><i class="fas fa-map-marker-alt"></i>Endereço</span>
+                <p class="contact-text">
+                  Av. Nutrição Saudável, 123 - Centro São Paulo, SP - CEP
+                  01234-567
+                </p>
+              </div>
+              <div class="contact-item">
+                <span><i class="fas fa-phone"></i>Telefone</span>
+                <p class="contact-text">(85) 99999-9999</p>
+              </div>
+              <div class="contact-item">
+                <span><i class="fas fa-envelope"></i>E-mail</span>
+                <p class="contact-text">contato@dravitoria.com.br</p>
+              </div>
+              <div class="contact-item">
+                <span><i class="fas fa-clock"></i>Horário de Atendimento</span>
+                <p class="contact-text">Segunda a Sexta: 8h às 18h</p>
+                <p class="contact-text">Sábado: 8h às 12h</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" class="social-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botão de Ação -->
+      <div class="page-footer">
+        <button
+          class="btn btn-secondary ripple"
+          data-action="openModal"
+          data-target="orcamentoModal"
+        >
+          Agendar Consulta
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal de Orçamento (único modal) -->
+    <div id="orcamentoModal" class="modal">
+      <div class="modal-container">
+        <!-- Cabeçalho do Modal -->
+        <div class="modal-header">
+          <button class="back-btn" data-action="closeModal">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <h2>Agendamento de Consulta</h2>
+          <div class="spacer"></div>
+        </div>
+
+        <!-- Conteúdo do Modal -->
+        <div class="modal-content">
+          <form id="orcamentoForm" class="space-y-6">
+            <div class="form-group">
+              <label for="nome" class="form-label">Nome Completo*</label>
+              <input
+                type="text"
+                id="nome"
+                class="form-control"
+                placeholder="Seu nome"
+              />
+            </div>
+            <div class="form-group">
+              <label for="telefone" class="form-label">Telefone*</label>
+              <input
+                type="tel"
+                id="telefone"
+                class="form-control"
+                placeholder="(00) 00000-0000"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                placeholder="seu@email.com"
+              />
+            </div>
+            <div class="form-group">
+              <label for="mensagem" class="form-label">Mensagem</label>
+              <textarea
+                id="mensagem"
+                class="form-control"
+                placeholder="Digite algo"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label">* Campos obrigatórios</label>
+            </div>
+          </form>
+        </div>
+
+        <!-- Botão de Ação -->
+        <div class="modal-footer">
+          <button id="btnAgendamento" class="btn btn-secondary ripple">
+            Agendar Consulta
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feedback de Sucesso -->
+    <div id="successModal" class="modal">
+      <div class="success-modal-container">
+        <div class="success-icon">
+          <i class="fas fa-check"></i>
+        </div>
+        <h3 class="success-title">Consulta agendada!</h3>
+        <p class="success-message">
+          Sua consulta foi agendada com sucesso. Em breve entraremos em contato
+          para confirmar.
+        </p>
+        <button class="btn btn-secondary ripple" data-action="successDone">
+          Entendi
+        </button>
+      </div>
+    </div>
+
+    <!-- Script para interatividade -->
+    <script src="script.js"></script>
+  </body>
+</html>
